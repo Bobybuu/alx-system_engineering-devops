@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script configures the local SSH client to use a specific private key and refuse password authentication
+
+Host *
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
