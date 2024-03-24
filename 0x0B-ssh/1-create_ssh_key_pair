@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # This script generates an RSA key pair with 4096 bits and protects the private key with the passphrase 'betty'
 
-openssl genpkey -algorithm RSA -out school.pem -aes256 -pass pass:betty -pkeyopt rsa_keygen_bits:4096
-openssl rsa -pubout -in school.pem -out school.pub
+ssh-keygen -b 4096 -N betty -f school
