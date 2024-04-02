@@ -6,12 +6,12 @@ add-apt-repository ppa:vbernat/haproxy -y
 apt-get update
 apt-get install haproxy -y
 echo "frontend web-front
-        bind *:80
+        bind 0:80
         default_backend web-backend
 
 backend web-backend
         balance roundrobin
-        server web01 100.25.2.1 check
-        server web02 54.160.73.99 check
+        server 528649-web-01 100.25.2.1:80 check
+        server 528649-web-02 54.160.73.99:80 check
 " | sudo tee -a /etc/haproxy/haproxy.cfg
 sudo service haproxy start
