@@ -47,5 +47,5 @@ frontend realchris-frontend-https
 
 backend realchris-backend
         balance roundrobin
-        server 528649-web-01 100.25.2.1:80 check
-        server 528649-web-02 54.160.73.99:80 check
+        server 528649-web-01 100.25.160.191:80 check
+        server 528649-web-02 54.84.10.229:80 check
