@@ -1,2 +1,13 @@
 #!/bin/bash
-echo shtbeolhc
+
+# Convert WATER (base "water") → decimal
+water_dec=$(( $(echo "$WATER" | tr 'water' '01234') ))
+
+# Convert STIR (base "stir") → decimal
+stir_dec=$(( $(echo "$STIR" | tr 'stir' '0123') ))
+
+# Add them
+sum=$(( water_dec + stir_dec ))
+
+# Convert back to base "bestchol"
+echo "$sum" | tr '01234567' 'bestchol'
